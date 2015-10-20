@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="gSwitch.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="gSwitch.js"></script>
+		<script>
+			$(document).ready(function() {
+				/*Standard*/
+				$('.switch-toggle-mini').gSwitch({colour: 'black', disabledColour:'lightgrey', toggleColour:'white', thinBar: false, width: 20});
+				$('.switch-toggle').gSwitch({colour: 'red', disabledColour:'lightgrey', toggleColour:'yellow'});
+				$('.switch-toggle-blue').gSwitch({colour: 'blue', disabledColour:'lightgrey', toggleColour:'lightgreen', width: 150});
+				$('.switch-toggle-maxi').gSwitch({colour: 'blueGrey', disabledColour:'lightgrey', toggleColour:'red', width: 250});
+				
+				/*Thin bars*/
+				$('.switch-toggle-thin').gSwitch({colour: 'red', disabledColour:'lightgrey', toggleColour:'lime', thinBar : true});
+				$('.switch-toggle-thin-maxi').gSwitch({colour: 'deepPurple', disabledColour:'lightgrey', toggleColour:'yellow', thinBar : true, width: 150});
+				$('.switch-toggle-thin-mini').gSwitch({colour: 'purple', disabledColour:'lightgrey', toggleColour:'orange', thinBar : true, width: 20});
+				
+				/*Custom colours*/
+				$('.switch-toggle-custom').gSwitch({colour: '#669900', disabledColour:'#dedede', toggleColour:'#ff0000'});
+				
+				/*Default values*/
+				$('.switch-toggle-default').gSwitch();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="switch-toggle-mini" data-default-state="checked">
+		</div>
+		<div class="switch-toggle">
+		</div>
+		<div class="switch-toggle-blue">
+		</div>
+		<div class="switch-toggle-maxi" data-default-state="checked">
+		</div>
+		<div class="switch-toggle-thin-mini">
+		</div>
+		<div class="switch-toggle-thin" data-default-state="checked">
+		</div>
+		<div class="switch-toggle-thin-maxi">
+		</div>
+		<div class="switch-toggle-custom">
+		</div>
+		<div class="switch-toggle-default" data-default-state="checked">
+		</div>
+	</body>
+</html>
