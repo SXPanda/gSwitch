@@ -1,0 +1,63 @@
+.js-switch {
+    display: inline-block;
+    height: 20px;
+    width: 40px;
+    border-radius: 100px;
+	background-color: #2196F3;
+	background: linear-gradient(0deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.05) 49%, rgba(0,0,0,0) 51%);
+	position: relative;
+}
+
+.js-switch input[type="checkbox"] {
+    display: none;
+}
+
+.js-switch-toggle {
+    display: block;
+    width: 40%;
+    height: 80%;
+    margin: 5%;
+    border-radius: 100px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+	transition: all 0.2s;
+}
+
+.js-switch-background {
+    display: block;
+    position: absolute;
+    z-index: -1;
+	opacity: 1;
+	transition: all 0.2s;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 10px solid grey;
+	border-radius: 2000px;
+}
+
+input:checked ~ .js-switch-background {
+	border-width: 0!important;
+}
+
+input:checked ~ .js-switch-toggle {
+    left: 50%;
+}
+
+/* Thin bar overrides */
+
+.js-switch.thin-bar {
+    height: 10px;
+    margin: 5px 0;
+}
+
+.thin-bar .js-switch-background {
+    border-width: 5px
+}
+
+.thin-bar .js-switch-toggle {
+    top:-50%;
+	height: 160%;
+}
